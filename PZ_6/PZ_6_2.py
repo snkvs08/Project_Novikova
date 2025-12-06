@@ -2,21 +2,26 @@
 # к числу R (то есть такой элемент AK, для которого величина |AK - R| является 
 # минимальной)
 
-target_R = 25
-list_A = [10, 30, 5, 40, 26, 24, 1, 50]
+import random
 
-print("Список А:", list_A)
-print("Значение R:", target_R)
+N = int(input("Введите размер списка: "))
+R = int(input("Введите число R: "))
+list_a = []
+while len (list_a) <= N:
+    list_a.append(random.randint(1,50))
 
-if not list_A: #проверяем, что список не пуст
+print("Список А:", list_a)
+print("Значение R:", R)
+
+if not list_a: #проверяем, что список не пуст
     closest_value = None
     print("Список пуст, ближайший элемент не найден.")
 else:
-    closest_value = list_A[0] - target_R
-    min_difference = abs(list_A[0] - target_R) #abs() - функция, которая возвращает абсолютное значение (например, abs(-5) = 5)
+    closest_value = list_a[0] - R
+    min_difference = abs(list_a[0] - R) #abs() - функция, которая возвращает абсолютное значение (например, abs(-5) = 5)
 
-    for element in list_A[1:]:
-        current_difference = abs(element - target_R) #для каждого элемента вычисляем его разницу с R
+    for element in list_a[1:]:
+        current_difference = abs(element - R) #для каждого элемента вычисляем его разницу с R
         if current_difference < min_difference: #если текущая разница меньше, то мы нашли более близкий элемент
             min_difference = current_difference
             closest_value = element
