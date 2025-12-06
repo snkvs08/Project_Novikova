@@ -3,13 +3,17 @@
 #первого элемента будет потеряно). Последний элемент полученного списка 
 # положить равным 0.
  
-list_A = [1, 2, 3, 4, 5]
-print("Список А:", list_A)
+import random
+N = int(input("Введите размер списка: "))
+list_a = []
+while len (list_a) <= N:
+    list_a.append(random.randint(1,50))
+print("Список А:", list_a)
 
-if len(list_A) > 0:
-    list_A.pop(0)
-    list_A.append(0)
+if len(list_a)> 0:
+    list_a.pop(0)
+    list_a.append(0)
 else:
     print("Список пуст, сдвиг невозможен.")
 
-print("Список после сдвига:", list_A)
+print("Список после сдвига:", list_a)
