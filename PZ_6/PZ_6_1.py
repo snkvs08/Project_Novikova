@@ -9,3 +9,4 @@ while len (list_a) <= N:
 
 print("Список А:", list_a)
 print("Элементы А2, А4, A6, ...:", list_a[1::2])
+
