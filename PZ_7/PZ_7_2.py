@@ -16,14 +16,14 @@ if '\\' in file_path: #проверяем, содержит ли путь раз
                 break
 
         if first_catalog:
-            print(f"Полный путь: {file_path}")
-            print(f"Название первого каталога: {first_catalog}")
+            print("Полный путь:", file_path)
+            print("Название первого каталога:", first_catalog)
         else:
-            print(f"Полный путь: {file_path}")
-            print(f"Файл в корневом каталоге диска: \\")
+            print("Полный путь:", file_path)
+            print("Файл в корневом каталоге диска: \\")
     else:
-        print(f"Полный путь: {file_path}")
+        print("Полный путь:", file_path)
         print("Файл в корневом каталоге: \\")
 else:
-    print(f"Введённая строка: {file_path}")
+    print("Введённая строка:", file_path)
     print("Файл в корневом каталоге (нет каталогов в пути): \\")
