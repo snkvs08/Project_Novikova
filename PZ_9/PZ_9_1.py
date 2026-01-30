@@ -6,23 +6,39 @@
 #2. в каких магазинах можно приобрести одновременно молоко, печенье и сыр.
 #3. в каких магазинах можно приобрести мясо и молоко.
 
-shops = {
-  "Магнит":{"молоко","соль","сахар","печенье","сыр"},
-  "Пятёрочка":{"мясо","молоко","сыр"},
-  "Перекрёсток":{"молоко","творог","сыр","сахар","печенье"},
-  "Лента":{"печенье","молоко","сыр"}
-}
-print("Магазины, в которых нельзя купить соль:")
-for name, items in shops.items():
-  if "соль" not in items:
-    print("-", name)
-    
-print("Магазины, в которых есть сразу молоко, печенье, сыр:")
-for name, items in shops.items():
-  if "молоко" in items and "печенье" in items and "сыр" in items:
-    print("-", name)
+magnit = {"молоко","соль","сахар","печенье","сыр"}
+pyaterochka = {"мясо","молоко","сыр"}
+perekrestok = {"молоко","творог","сыр","сахар","печенье"}
+lenta = {"печенье","молоко","сыр"}
 
+print("Магазины, в которых нельзя купить соль:")
+if "соль" not in magnit:
+  print("Магнит")
+if "соль" not in pyaterochka:
+  print("Пятёрочка")
+if "соль" not in perekrestok:
+  print("Перекрёсток")
+if "соль" not in lenta:
+  print("Лента")
+
+tovar = {"печенье","молоко","сыр"}
+print("Магазины, в которых есть сразу молоко, печенье, сыр:")
+if tovar <= magnit:
+  print("Магнит")
+if tovar <= pyaterochka:
+  print("Пятёрочка")
+if tovar <= perekrestok:
+  print("Перекрёсток")
+if tovar <= lenta:
+  print("Лента")
+
+tovar_2 = {"мясо","молоко"}
 print("Магазины, где есть и мясо, и молоко:")
-for name, items in shops.items():
-  if "мясо" in items and "молоко" in items:
-    print("-", name)
+if tovar_2 <= magnit:
+  print("Магнит")
+if tovar_2 <= pyaterochka:
+  print("Пятёрочка")
+if tovar_2 <= perekrestok:
+  print("Перекрёсток")
+if tovar_2 <= lenta:
+  print("Лента")
