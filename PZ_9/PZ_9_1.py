@@ -42,3 +42,4 @@ if tovar_2 <= perekrestok:
   print("Перекрёсток")
 if tovar_2 <= lenta:
   print("Лента")
+  
