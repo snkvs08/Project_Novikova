@@ -1,7 +1,7 @@
 #В магазинах имеются следующие товары. Магнит – молоко, соль, сахар, печенье, сыр.
 #Пятерочка – мясо, молоко, сыр. Перекресток – молоко, творог, сыр, сахар, печенье. Лента
 #– печенье, молоко, сыр.
-#Определить:
+#Определить: | & -
 #1. в каких магазинах нельзя приобрести соль.
 #2. в каких магазинах можно приобрести одновременно молоко, печенье и сыр.
 #3. в каких магазинах можно приобрести мясо и молоко.
@@ -12,34 +12,33 @@ perekrestok = {"молоко","творог","сыр","сахар","печень
 lenta = {"печенье","молоко","сыр"}
 
 print("Магазины, в которых нельзя купить соль:")
-if "соль" not in magnit:
+if {"соль"} - magnit == {"соль"}:
   print("Магнит")
-if "соль" not in pyaterochka:
+if {"соль"} - pyaterochka == {"соль"}:
   print("Пятёрочка")
-if "соль" not in perekrestok:
+if {"соль"} - perekrestok == {"соль"}:
   print("Перекрёсток")
-if "соль" not in lenta:
+if {"соль"} - lenta == {"соль"}:
   print("Лента")
 
 tovar = {"печенье","молоко","сыр"}
 print("Магазины, в которых есть сразу молоко, печенье, сыр:")
-if tovar <= magnit:
+if tovar & magnit == tovar:
   print("Магнит")
-if tovar <= pyaterochka:
+if tovar & pyaterochka == tovar:
   print("Пятёрочка")
-if tovar <= perekrestok:
+if tovar & perekrestok == tovar:
   print("Перекрёсток")
-if tovar <= lenta:
+if tovar & lenta == tovar:
   print("Лента")
 
 tovar_2 = {"мясо","молоко"}
 print("Магазины, где есть и мясо, и молоко:")
-if tovar_2 <= magnit:
+if tovar_2 & magnit == tovar_2:
   print("Магнит")
-if tovar_2 <= pyaterochka:
+if tovar_2 & pyaterochka == tovar_2:
   print("Пятёрочка")
-if tovar_2 <= perekrestok:
+if tovar_2 & perekrestok == tovar_2:
   print("Перекрёсток")
-if tovar_2 <= lenta:
+if tovar_2 & lenta == tovar_2:
   print("Лента")
-  
