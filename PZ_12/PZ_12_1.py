@@ -8,7 +8,7 @@ c = int(input("Введите количество столбцов: "))
 
 N = int(input("Введите номер строки: "))
 
-matrix = [[random.randint(1, 100) for j in range(n)] for i in range(c)]
+matrix = [[random.randint(1, 3) for j in range(n)] for i in range(c)]
 
 s = sum(matrix[N-1][j] for j in range(n))
 k = (matrix[N-1][j] for j in range(n))
