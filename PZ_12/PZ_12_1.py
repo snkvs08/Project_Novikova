@@ -3,10 +3,12 @@
 import random
 from functools import reduce
 
-n = int(input("Введите размер матрицы (n x n): "))
+n = int(input("Введите количество строк: "))
+c = int(input("Введите количество столбцов: "))
+
 N = int(input("Введите номер строки: "))
 
-matrix = [[random.randint(1, 100) for j in range(n)] for i in range(n)]
+matrix = [[random.randint(1, 100) for j in range(n)] for i in range(c)]
 
 s = sum(matrix[N-1][j] for j in range(n))
 k = (matrix[N-1][j] for j in range(n))

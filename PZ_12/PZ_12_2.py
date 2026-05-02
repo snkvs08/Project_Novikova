@@ -2,14 +2,15 @@
 
 import random
 
-n = int(input("Введите чётный размер матрицы (n x n): "))
+n = int(input("Введите количество строк: "))
+c = int(input("Введите количество столбцов: "))
 
-if n % 2 != 0:
-    print("Ошибка: размер матрицы должен быть четным числом!")
+if c % 2 != 0:
+    print("Ошибка: количество столбцов должно быть четным числом!")
 else:
-    matrix = [[random.randint(1, 100) for j in range(n)] for i in range(n)]
+    matrix = [[random.randint(1, 100) for j in range(c)] for i in range(n)]
 
-    s = sum(matrix[i][j] for i in range(n) for j in range(n//2, n))
+    s = sum(matrix[i][j] for i in range(n) for j in range(c//2, c))
 
     print("Матрица:", matrix)
     print("Сумма элементов второй половины матрицы:", s)
