@@ -41,4 +41,5 @@ if tovar_2 & pyaterochka == tovar_2:
 if tovar_2 & perekrestok == tovar_2:
   print("Перекрёсток")
 if tovar_2 & lenta == tovar_2:
+
   print("Лента")
