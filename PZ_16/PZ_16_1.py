@@ -2,7 +2,7 @@
 #Напишите метод, который выводит информацию о товаре в формате "Название: название, Цена: цена, Количество: кол-во"
 
 class Tovar:
-    def init(self, name, price, quantity):
+    def __init__(self, name, price, quantity):
         self.name = name
         self.price = price
         self.quantity = quantity

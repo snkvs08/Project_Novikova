@@ -3,7 +3,7 @@
 #связанные с вычислением площади и периметра.
 
 class Figure:
-    def init(self, width, height):
+    def __init__(self, width, height):
         self.width = width
         self.height = height
 
@@ -11,8 +11,8 @@ class Rectangle(Figure):
     pass
 
 class Square(Figure):
-    def init(self, side):
-        super().init(side, side)
+    def __init__(self, side):
+        super().__init__(side, side)
     def area(self):
         return self.width ** 2
     def perimeter(self):
