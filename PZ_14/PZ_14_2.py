@@ -1,7 +1,6 @@
 #Из двух чисел вывести большее.
 
 from tkinter import *
-
 def num():
     a = int(num1.get())
     b = int(num2.get())
