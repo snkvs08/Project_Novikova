@@ -45,3 +45,4 @@ with sql.connect('expenses.txt') as con:
     print('Конечная база данных:')
     for i in cur:
         print(i)
+        
